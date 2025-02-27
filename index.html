@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Book</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #4e342e, #8d8763, #d7ccc8);
+        font-family: "Dancing Script", cursive;
+        text-align: center;
+      }
+      .book {
+        position: relative;
+        width: 650px;
+        height: 750px;
+        background: #efebe9;
+        border-radius: 20px;
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        overflow: hidden;
+        transition: transform 0.5s ease;
+        border: 6px solid #6d4c41;
+      }
+      .cover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #6d4c41;
+        border-radius: 20px;
+        text-align: center;
+        color: white;
+        font-size: 45px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.5s ease;
+        font-family: "Dancing Script", cursive;
+      }
+      .content {
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        top: 5%;
+        left: 5%;
+        background: #efebe9;
+        padding: 0px;
+        border-radius: 15px;
+        box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.1);
+        font-size: 28px;
+        line-height: 2.2;
+        opacity: 0;
+        transform: scale(0.9);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        overflow-y: auto;
+        font-family: "Dancing Script", cursive;
+        color: #5d4037;
+      }
+      .book.open .cover {
+        transform: rotateY(180deg);
+        opacity: 0;
+      }
+      .book.open .content {
+        opacity: 1;
+        transform: scale(1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="book" onclick="openBook()">
+      <div class="cover">Open Me</div>
+      <div class="content">
+        <p>
+          I love you a little extra when you carry my bag even when you have
+          yours.<br />
+          I love you a little extra when you press my legs while you drive the
+          bike.<br />
+          I love you a little extra while you wait for me without
+          complaining.<br />
+          I love you a little extra when you bring activities to do with me.<br />
+          I love you a little extra when you keep my picture as a wallpaper on
+          your phone.<br />
+          I love you a little extra when you play games with me even when you
+          know I won't play well.<br />
+          I love you a little extra when you support me in front of others.<br />
+          These little things mean a lot to me chellam. I am so grateful and
+          thankful to have you in my life.<br />
+          I respect you a little extra when you try to change yourself for
+          me.<br />
+          I respect you a little extra whenever you treat a stranger with
+          kindness.<br />
+          I respect you a little extra whenever you stand up for everyone.<br />
+          As a girl with trust issues, you never even speak of leaving. So I am
+          grateful for that.<br />
+          You heal my past scars and wounds without even knowing them all.<br />
+          <strong
+            >David unmaiya solren mean pani solren past nala neriya trust issues
+            iruku.</strong
+          ><br />
+          But nee elathaiyum heal panra unake theriyama and adhuku na romba
+          lucky da.<br />
+          I miss you whenever you are not around me.<br />
+          Happiest bday my dearest love.<br />
+          I wish to experience every hugs, kisses, tears, fights and everything
+          with you.<br />
+          I also want to celebrate every birthday, valentine's day and
+          anniversary with you my love.<br />
+          Finally again wishing you <br /><strong
+            >"HAPPY 20 FROM UR 20!!!"</strong
+          >
+        </p>
+      </div>
+    </div>
+    <script>
+      function openBook() {
+        document.querySelector(".book").classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>
